@@ -1,0 +1,30 @@
+{
+  "name": "feed_express",
+  "version": "1.0.0",
+  "description": "food ordering app",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/div-cosmos/feed_express.git"
+  },
+  "keywords": [
+    "foodzilla",
+    "food-delight"
+  ],
+  "author": "Divyanshu Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/div-cosmos/feed_express/issues"
+  },
+  "homepage": "https://github.com/div-cosmos/feed_express#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
