@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  color: #282c3f;
+  letter-spacing: 0;
+}

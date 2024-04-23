@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "food ordering app",
   "scripts": {
+    "start": "parcel ./public/index.html",
     "test": "jest"
   },
   "repository": {
