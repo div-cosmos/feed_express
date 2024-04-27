@@ -15,6 +15,8 @@ header {
 }
 
 .global-nav {
+  margin-left: var(--doc-left-spacing);
+  margin-right: var(--doc-right-spacing);
   max-height: 100%;
   display: flex;
   flex-direction: row;
@@ -47,8 +49,8 @@ header {
 /* app content */
 
 .app-content-home {
-  margin-left: calc(10% + 24px);
-  margin-right: calc(10% + 24px);
+  margin-left: var(--doc-left-spacing);
+  margin-right: var(--doc-right-spacing);
 }
 
 .search-home-box-container {
@@ -80,6 +82,16 @@ header {
   background: inherit;
   vertical-align: middle;
   font-weight: 500;
+}
+
+.btn-filter-res {
+  margin: 0 24px;
+  padding: 5px;
+  max-width: fit-content;
+  border: 1px solid #e2e2e7;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
 }
 
 .res-container {
