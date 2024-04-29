@@ -119,10 +119,14 @@ header {
   cursor: pointer;
 }
 
-.res-card h3,
-h4 {
-  margin: 0;
-  line-height: 16px;
+.res-card p {
+  font-weight: 400;
+  font-size: 12px;
+  color: darkslategrey;
+}
+
+.res-card h4 {
+  font-size: 14px;
 }
 
 .res-banner {
