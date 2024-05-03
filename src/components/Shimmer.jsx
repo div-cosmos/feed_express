@@ -4,7 +4,6 @@ import { SHIMMER_TYPE } from "../constants";
 const Shimmer = ({ type, className, styleObj, templateCount }) => {
   const renderShimmer = () => {
     if (type === SHIMMER_TYPE.RES_CARD) {
-      debugger;
       const generateLoadTemplate = () => {
         let resCards = [];
         let cardCount = templateCount ? templateCount : 1;
