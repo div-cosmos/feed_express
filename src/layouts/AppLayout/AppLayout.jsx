@@ -9,6 +9,7 @@ const AppLayout = () => {
     <React.Fragment>
       <div className="main-layout">
         <Header />
+        {/* rendering the matched child route element below by replacing the <Outlet/> with the matched child route element */}
         <Outlet />
         <Footer />
       </div>

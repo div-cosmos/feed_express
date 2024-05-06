@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import RestaurantCard from "../components/RestaurantCard";
 import Shimmer from "../components/Shimmer";
 import { SHIMMER_TYPE } from "../constants";
+import { LINK_RESTAURANTS } from "../routes";
 
 const PageHome = () => {
   const [restaurantInfoList, setRestaurantList] = useState([]);
@@ -39,17 +41,21 @@ const PageHome = () => {
   };
 
   const onSearchSubmit = (e) => {
-    const filteredDataOnSearch = restaurantInfoList.filter((restaurant) => {
-      if (restaurant?.info?.name?.toLowerCase()?.includes(search.toLowerCase()))
-        return true;
-      else if (restaurant?.info?.cuisines) {
-        return restaurant?.info?.cuisines?.some((cuisine) =>
-          cuisine?.toLowerCase()?.includes(search.toLowerCase())
-        );
-      } else return false;
-    });
-    if (filteredDataOnSearch.length) {
-      setFilteredRestaurantList(filteredDataOnSearch);
+    if (search) {
+      const filteredDataOnSearch = restaurantInfoList.filter((restaurant) => {
+        if (
+          restaurant?.info?.name?.toLowerCase()?.includes(search.toLowerCase())
+        )
+          return true;
+        else if (restaurant?.info?.cuisines) {
+          return restaurant?.info?.cuisines?.some((cuisine) =>
+            cuisine?.toLowerCase()?.includes(search.toLowerCase())
+          );
+        } else return false;
+      });
+      if (filteredDataOnSearch.length) {
+        setFilteredRestaurantList(filteredDataOnSearch);
+      }
     }
   };
 
@@ -103,10 +109,13 @@ const PageHome = () => {
       }
 
       return (
-        <RestaurantCard
+        <Link
           key={restaurantItem?.info?.id}
-          {...dynamicDataAsProps}
-        />
+          className="nav-link"
+          to={`${LINK_RESTAURANTS}/${restaurantItem?.info?.id}`}
+        >
+          <RestaurantCard {...dynamicDataAsProps} />
+        </Link>
       );
     });
   };
